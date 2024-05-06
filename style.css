@@ -1,0 +1,149 @@
+* {
+    background-color: rgba(11,11,11,255);
+    font-family: 'Jetbrains Mono';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+
+}
+
+.cursor-outline{
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsla(0,0%,100%,0.5);
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+    --red: rgb(210,31,60);
+    --white: rgb(226,227,239);
+    --orange: rgb(250, 200, 152);
+    --pastelred: rgb(255, 105, 97);
+    --black: #0D0E17;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+
+    }
+
+    to{
+        background-position: -200% center;
+    }
+}
+
+::selection {
+    color: var(--white);
+    background-color: var(--violet);
+}
+
+.bodyReal .BGImage .background{
+    background: 50% cover /no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+    left: 95%;
+    align-items: center;
+    top: 1; 
+}
+
+.navbar li {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar li a:hover {
+    color: var(--purple);
+    transition: .3s;
+}
+
+.bio .bio2{ 
+    color: #fff;
+    overflow-wrap: break-word;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10%;
+    right: 80%;
+}
+
+.cryingMoji{
+    height: 17px;
+}
+
+.magicText {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.headLogo {
+    left: 10%;
+    color: #fff;
+}
+
+.badge {
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    top: 550px;
+    left: 1550px;
+}
+
+.starIcon {
+    background: url('star.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 24px;
+    bottom: 15%;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-32deg);
+}
